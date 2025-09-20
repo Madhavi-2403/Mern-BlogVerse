@@ -1,13 +1,19 @@
 import ProductCard from "./ProductCard";
 
 import NavBar from "./NavBar"
-import SignUp from "./SignUp"
+import Home from "./Home"
+ //import HomePage from "./HomePage"
+// import SignUp from "./SignUp"
+import Login from "./login"
 function App() {
   return (
-    <div>
+    <div className="bg-gray-100">
 
       <NavBar />
-      <SignUp />
+      <Home/>
+      {/* <HomePage/> */}
+     {/* <SignUp />  */}
+      <Login />
 
     </div>
     // <div className="flex justify-center items-center min-h-screen gap-8">
