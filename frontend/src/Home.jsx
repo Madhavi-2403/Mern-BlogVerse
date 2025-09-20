@@ -1,3 +1,4 @@
+import NavBar from "./NavBar"
 function Home() {
     // const id = [1, 2, 3, 4, 5]
     const object = [{
@@ -52,9 +53,10 @@ function Home() {
     }]
     return (
         <>
-            <div className="flex min-h-screen flex-col justify-center items-center  py-10 ">
-
-                <h1 className="font-bold text-4xl mb-7">Welcome to BlogVerse</h1>
+         
+            <div className="flex min-h-screen flex-col justify-center items-center bg-blue-50 ">
+              <NavBar/>
+                <h1 className="font-bold text-4xl mt-7 mb-7">Welcome to BlogVerse</h1>
                 <h1 className="text-gray-500 text-xl text-center mb-7">Discover amazing stories, insights, and ideas from  our community of <br />writers.<span className="text-blue-500 hover:underline cursor-pointer">Sign in</span> to create your own posts and save your favorites.
                 </h1>
                 <div className="flex flex-wrap mt-5 w-full pb-5 gap-10 justify-center items-center ">
@@ -63,13 +65,15 @@ function Home() {
                         <div className="w-[26%] h-[27%] border-1 border-gray-300 shadow-2xs flex  flex-col justify-center items-center  rounded-2xl relative  hover:shadow-2xl ">
 
                             <div key={item.id}>
-                                <img src={item.img} alt="Loading image" className="w-full h-1/3 rounded-t-2xl transition-transform duration-300  hover:scale-102 " />
+                                <div className="rounded-t-2xl">
+                                <img src={item.img} alt="Loading image" className="w-full h-1/3 rounded-t-2xl transition-transform duration-300 object-cover  hover:scale-102 " />
                                 <p className=" bg-blue-500 px-2 py-1 text-white m-auto rounded-3xl text-center absolute top-4 left-4 ">Technology</p>
-                                <button  onClick={() => alert("This page has been saved")} className=" bg-white rounded-full w-4 absolute top-4 right-4" >⇲</button>
+                                <button onClick={() => alert("This page has been saved")} className=" bg-white rounded-full w-4 absolute top-4 right-4" >⇲</button>
+                               </div>
                                 <div className="flex gap-3 py-5 px-3">
                                     <img src={item.img} alt="no profile" className="w-[50px] h-[50px] rounded-full object-cover " />
                                     <div>
-                                        <p className="font-semibold sm:text-2xl">{item.name}</p>
+                                        <p className="font-semibold sm:text-1xl">{item.name}</p>
                                         <div className="flex gap-3">
                                             <p>{item.time}</p>
                                             <p>🧐{item.read}</p>
@@ -77,7 +81,6 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="flex flex-center justify-center flex-col items-center " >
-
                                     <h2 className="flex justify-center text-center flex-col font-bold text-1xl mb-4 ">{item.head}</h2>
                                     <p className="mb-4 px-5">{item.para}</p>
                                     <div className="border-1 border-gray-200 w-[90%] mb-4 "></div>
