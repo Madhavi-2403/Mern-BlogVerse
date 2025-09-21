@@ -59,16 +59,16 @@ function Home() {
                 <h1 className="font-bold text-4xl mt-7 mb-7">Welcome to BlogVerse</h1>
                 <h1 className="text-gray-500 text-xl text-center mb-7">Discover amazing stories, insights, and ideas from  our community of <br />writers.<span className="text-blue-500 hover:underline cursor-pointer">Sign in</span> to create your own posts and save your favorites.
                 </h1>
-                <div className="flex flex-wrap mt-5 w-full pb-5 gap-10 justify-center items-center ">
+                <div className="flex flex-wrap mt-5 w-full  pb-5 gap-10 sm:w-[80%]  justify-center items-center ">
                     {/* </div><div className="w-1/3 h-1/3 border-1 border-gray-700 shadow-2xs flex  flex-col justify-center py-6"> */}
                     {object.map((item) => (
-                        <div className="w-[26%] h-[27%] border-1 border-gray-300 shadow-2xs flex  flex-col justify-center items-center  rounded-2xl relative  hover:shadow-2xl ">
+                        <div className=" h-[27%] sm:w-[70%] lg:w-[25%]  border-1  border-gray-300 shadow-2xs flex  flex-col justify-center items-center  rounded-2xl relative  hover:shadow-2xl ">
 
                             <div key={item.id}>
                                 <div className="rounded-t-2xl">
                                 <img src={item.img} alt="Loading image" className="w-full h-1/3 rounded-t-2xl transition-transform duration-300 object-cover  hover:scale-102 " />
                                 <p className=" bg-blue-500 px-2 py-1 text-white m-auto rounded-3xl text-center absolute top-4 left-4 ">Technology</p>
-                                <button onClick={() => alert("This page has been saved")} className=" bg-white rounded-full w-4 absolute top-4 right-4" >⇲</button>
+                                <button onClick={() => alert("This page has been saved")} className=" bg-white rounded-full w-6 absolute top-4 right-4" >⇲</button>
                                </div>
                                 <div className="flex gap-3 py-5 px-3">
                                     <img src={item.img} alt="no profile" className="w-[50px] h-[50px] rounded-full object-cover " />
