@@ -3,7 +3,7 @@ import NavBar from "./NavBar"
 import Home from "./Home"
 //import HomePage from "./HomePage"
 import SignUp from "./SignUp"
-import Login from "./login";
+import Login from "./Login";
 import { Routes, Route } from 'react-router-dom'
 function App() {
 
